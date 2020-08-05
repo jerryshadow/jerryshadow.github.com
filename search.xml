@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Python：01-关于程序的那些事</title>
+      <link href="/2020/08/05/Python%EF%BC%9A01-%E5%85%B3%E4%BA%8E%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+      <url>/2020/08/05/Python%EF%BC%9A01-%E5%85%B3%E4%BA%8E%E7%A8%8B%E5%BA%8F%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="运行内存"><a href="#运行内存" class="headerlink" title="运行内存"></a>运行内存</h1><ul><li>内存就是main memory 又叫主存。通过控制芯片直接和cpu相连，主要负责存储指令和数据，每个字节都有一个地址编号，cou通过地址编号来进行寻址，存入或读取数据。主存会随计算机的关机而自动清除</li></ul><ul><li>程序由指令和数据组成，正在运行的程序一般是从辅存加载到主存上的</li><li>运行内存的大小直接决定了系统能运行多少程序</li></ul><hr><h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><blockquote><p>有一天你想吃水煮鱼片了，怎么办呢？你有两个选择</p></blockquote><blockquote><p>1、自己买材料，鱼，调料，蒜苔等等然后切菜切鱼，烹饪，盛到盘子里。</p></blockquote><blockquote><p>2、去饭店，张开嘴：老板！来一份水煮鱼片！</p></blockquote><p>看出来区别了吗？这就是1是面向过程，2是面向对象。</p><ul><li>面向过程是具体化的，流程化的，解决一个问题，你需要一步一步的分析，一步一步的实现。</li><li>面向对象是模型化的，你只需抽象出一个类，这是一个封闭的盒子，在这里你拥有数据也拥有解决问题的方法。需要什么功能直接使用就可以了，不必去一步一步的实现，至于这个功能是如何实现的，管我们什么事？我们会用就可以了。</li><li>面向对象的底层其实还是面向过程，把面向过程抽象成类，然后封装，方便我们我们使用的就是面向对象了。</li><li>面向过程：<ul><li>优点：性能比面向对象好，因为类调用时需要实例化，开销比较大，比较消耗资源</li><li>缺点：不易维护、不易复用、不易扩展</li></ul></li><li>面向对象：<ul><li>优点：易维护、易复用、易扩展，由于面向对象有封装、继承、多态性的特性，可以设计出低耦合的系统，使系统 更加灵活、更加易于维护 .</li><li>缺点：性能比面向过程差</li></ul></li></ul><hr><h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><ul><li>引用计数</li><li>Python垃圾回收主要以引用计数为主，分代回收为辅。引用计数法的原理是每个对象维护一个ob_ref, 用来记录当前对象被引用的次数,也就是来追踪到底有多少引用指向了这个对象</li><li>当发生以下四种情况的时候,该对象的引用计数器+1：<ul><li>对象被创建 a=14</li><li>对象被引用 b=a</li><li>对象被作为参数传到函数中 func(a)</li><li>对象作为一个元素，存储在容器中 List={a,“a”,“b”,2}</li></ul></li><li>当发生以下四种情况时,该对象的引用计数器-1：<ul><li>当该对象的别名被显式销毁时 del a</li><li>当该对象的引别名被赋予新的对象 a=26</li><li>一个对象离开它的作用域，例如func函数执行完毕时，函数里面的局部变量的引用计数器就会减一(但是全局变量不会)</li><li>将该元素从容器中删除时，或者容器被销毁</li></ul></li><li>当计数为0时，python会删除主内存中的对象</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
